@@ -1,5 +1,5 @@
 # Where things are
-source:       jekyll
+source:       "jekyll"
 destination:  ./blog
 
 # Handling Reading
