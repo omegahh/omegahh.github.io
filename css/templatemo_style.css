@@ -339,7 +339,7 @@ h2.welcome-title {
 }
 
 .story-bg {
-    background: url("../img/story-bg.jpg");
+    background: url("../photos/story-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
@@ -378,7 +378,7 @@ h2.welcome-title {
 }
 
 .offer-bg {
-    background: url("../img/offer-bg.jpg");
+    background: url("../photos/offer-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
@@ -622,15 +622,15 @@ span.solid-line {
 }
 
 .blog-blue {
-    background: url("../img/blog-blue.jpg");
+    background: url("../photos/blog-blue.jpg");
 }
 
 .blog-pink {
-    background: url("../img/blog-pink.jpg");
+    background: url("../photos/blog-pink.jpg");
 }
 
 .blog-green {
-    background: url("../img/blog-green.jpg");
+    background: url("../photos/blog-green.jpg");
 }
 
 .post-1 {
@@ -952,7 +952,7 @@ span[class*="border-"] {
     right: 20px;
     width: 50px;
     height: 50px;
-    background: url("../img/shape-1.png") no-repeat;
+    background: url("../photos/shape-1.png") no-repeat;
 }
 
 .shape-2 {
@@ -961,7 +961,7 @@ span[class*="border-"] {
     left: 20px;
     width: 50px;
     height: 50px;
-    background: url("../img/shape-2.png") no-repeat;
+    background: url("../photos/shape-2.png") no-repeat;
 }
 
 .main-footer .social li a {
