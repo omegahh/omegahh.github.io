@@ -40,10 +40,10 @@ page:
     url: http://omegaxy.com
     last: true
   - text: Friend Links
-    url: ./links.html
+    url: ./blog/links.html
     last: true
   - text: About Me
-    url: ./about.html
+    url: /blog/about.html
     last: false
 
 # Nav Bar
