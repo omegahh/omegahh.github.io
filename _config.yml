@@ -49,15 +49,15 @@ page:
 # Nav Bar
 nav:
   - text: Home
-    url: /index.html
+    url: /blog/index.html
     icon: icon-home
     class: home
   - text: Archive
-    url: /archives.html
+    url: /blog/archives.html
     icon: icon-reorder
     class: none
   - text: About Me
-    url: /about.html
+    url: /blog/about.html
     icon: icon-envelope-alt
     class: none
   - text: Change Theme
