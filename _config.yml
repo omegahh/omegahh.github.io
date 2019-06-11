@@ -1,6 +1,6 @@
 # Where things are
-source:       "jekyll"
-destination:  ./blog
+# source:       "jekyll"
+# destination:  ./blog
 
 # Handling Reading
 safe:         false
@@ -23,7 +23,7 @@ lsi:          false
 excerpt_separator: "\n\n"
 
 # Outputting
-permalink:     /:year-:month-:day/:title/
+permalink:     /blog/:year-:month-:day/:title/
 timezone:      null
 
 #site config
