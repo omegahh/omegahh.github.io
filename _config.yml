@@ -29,8 +29,8 @@ timezone:      null
 #site config
 title: Bumble Bee
 subTitle: Starving for Knowledge.
-url: http://omegaxy.com/blog
-shortname: /blog
+url: http://omegaxy.com/
+shortname: /
 feed: /atom.xml
 author: Omega
 
