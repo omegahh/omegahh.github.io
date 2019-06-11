@@ -30,7 +30,6 @@ timezone:      null
 title: Bumble Bee
 subTitle: Starving for Knowledge.
 url: http://omegaxy.com/
-shortname: /
 feed: /atom.xml
 author: Omega
 
@@ -40,7 +39,7 @@ page:
     url: http://omegaxy.com
     last: true
   - text: Friend Links
-    url: ./blog/links.html
+    url: /blog/links.html
     last: true
   - text: About Me
     url: /blog/about.html

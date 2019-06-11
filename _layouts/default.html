@@ -17,7 +17,7 @@
             {% if page.url == link.url%}{% assign active = 'current' %}{% endif %}
             {% if link.class == 'home' %}{% assign homeClass = 'home ' %}{% endif %}
             <li class="{{ homeClass }}{{ active }}">
-                <a href="{% if link.url %}{{ site.shortname }}{{ link.url }}{% else %}#{% endif %}" rel="{% if link.rel %}{{ link.rel }}{% else %}bookmark{% endif %}" title="{{link.text}}" {%if link.id %} id = "{{ link.id }}"{% endif %} >
+                <a href="{% if link.url %}{{ site.url }}{{ link.url }}{% else %}#{% endif %}" rel="{% if link.rel %}{{ link.rel }}{% else %}bookmark{% endif %}" title="{{link.text}}" {%if link.id %} id = "{{ link.id }}"{% endif %} >
                     <i class="{{ link.icon }}"></i>
                 </a>
             </li>{% endfor %}

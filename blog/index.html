@@ -12,7 +12,7 @@ keywords: Bumble Bee, Omega, Jekyll, Geeker
 </section>
 <article class="lotus-article">
 {% for rpost in site.posts limit:2 %}
-    <h3><a href="{{ site.shortname }}{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></h3>
+    <h3><a href="{{ site.url }}{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></h3>
     <p itemprop="description">{% if rpost.excerpt.size > 32 %}{{ rpost.excerpt }}{% else %}{{ rpost.content | strip_html | strip_newlines | truncate: 160 }}{% endif %}</p>
 {% endfor %}
 </article>
@@ -21,7 +21,7 @@ keywords: Bumble Bee, Omega, Jekyll, Geeker
     <h3>Older Posts</h3>
         <ul>
             {% for npost in site.posts limit:3 offset:2 %}
-            <li><a href="{{ site.shortname }}{{ npost.url }}" pubdate="{{ npost.date | date_to_utc | date: '%Y-%m-%d' }}" title="{{ npost.title }}" rel="bookmark">{{ npost.title }}</a></li>
+            <li><a href="{{ site.url }}{{ npost.url }}" pubdate="{{ npost.date | date_to_utc | date: '%Y-%m-%d' }}" title="{{ npost.title }}" rel="bookmark">{{ npost.title }}</a></li>
             {% endfor %}
         </ul>
     </article>

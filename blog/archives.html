@@ -21,7 +21,7 @@ keywords: GitHub, Jekyll, Works, Archives, Design, Geek
         <li><span>{{ this_year }} &nbsp;</span>
             <ul>
     {% endif %}
-                <li>{{ post.date | date: "%B %e" }} : <a href="{{ site.shortname }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+                <li>{{ post.date | date: "%B %e" }} : <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
     {% if forloop.last %}
             </ul>
         </li>
