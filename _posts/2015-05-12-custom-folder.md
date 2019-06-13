@@ -18,7 +18,7 @@ title:        Mac 下个性化文件夹
 1.  按下 'Command'＋‘Shift’＋‘G’ 打开 Go to 功能，
 2.  粘贴以上路径并点击 Go 按钮，Finder 将进入此目录。
 
-![图标文件夹](/Pictures/icon-folder.png)
+![图标文件夹](/imgs/icon-folder.png)
 
 将自己想要个性化的文件夹在“显示简介”后就可以更改自己满意的图标了
 
@@ -32,7 +32,7 @@ title:        Mac 下个性化文件夹
 
 编辑文件显示是乱码，如图。
 
-![显示是乱码](/Pictures/error-codes.png)
+![显示是乱码](/imgs/error-codes.png)
 
 因为这个文件在 Mac 系统中是二进制文件，需要先转化为 xml 格式的，
 
@@ -40,7 +40,7 @@ title:        Mac 下个性化文件夹
 
 再次编辑就正常了，这是添加自己想要的中英文对应条目，
 
-![显示终于正常](/Pictures/not-error-codes.png)
+![显示终于正常](/imgs/not-error-codes.png)
 
 之后再把这个文件转换回二进制文件
 

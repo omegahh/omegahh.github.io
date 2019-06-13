@@ -28,7 +28,7 @@ title:        ROC 分析简要
 
 如此就有下图所表示的各类指标的表示，图的中心位置我们称为**混淆矩阵 (Confusion Matrix)**
 
-![Atlas](/Pictures/PerformTest/Performance.png)
+![Atlas](/imgs/PerformTest/Performance.png)
 
 > 各种性能指标中概览及关系（来源：wikipedia）
 
@@ -110,13 +110,13 @@ $$
 
 **ROC 分析**是从医疗分析领域引入的一种新的分类模型评判方法。其全名是 **Receiver Operating Characteristic**，其主要分析工具是一个画在二维平面上的曲线——**ROC curve**。平面的横坐标是 **False Positive Rate(FPR)**，纵坐标是 **True Positive Rate(TPR)**。对取某个**阈值 (Threshold)** 的分类器而言，可以根据其在测试样本的表现得到一个 **TPR** 和 **FPR** 点对。这样，此分类器就可以表示成平面上的一个点。调整这个分类器分类时候使用的阈值，我们就可以得到一个经过 (0,0)-(1,1) 的曲线，这就是此分类器的 **ROC 曲线**。
 
-![3条ROC曲线](/Pictures/PerformTest/Roccurves.png)
+![3条ROC曲线](/imgs/PerformTest/Roccurves.png)
 
 > 三个预测蛋白酶体的肽切割分类模型的 ROC 曲线 (来源：wikipedia)
 
 一般情况下，这个曲线都应该处于 (0,0) 和 (1,1) 连线的上方。因为 (0,0) 和 (1,1) 连线形成的 ROC 曲线实际上代表的是一个随机分类器 (Baseline Model)。
 
-![BaseLine Model](/Pictures/PerformTest/Baseline.png)
+![BaseLine Model](/imgs/PerformTest/Baseline.png)
 
 > 对角线作为基线指示了一个一个分类器的好坏，曲线在上方表示优于随机分类，反之则差。(来源：wikipedia)
 

@@ -53,7 +53,7 @@ public class Server {
 
 在我的机器上，显示如下内容，可以看到，这个一个get请求
 
-![http-get](/Pictures/http-get.png)
+![http-get](/imgs/http-get.png)
 
 下面利用一个 html 的 form表单提交 post 请求
 
@@ -67,7 +67,7 @@ public class Server {
 
 在我的机器上，显示如下内容
 
-![http-post](/Pictures/http-post.png)
+![http-post](/imgs/http-post.png)
 
 注意图中被红色框起来的部分，第一个红框指示了本次请求中，用来分隔不同元素的分隔线。
 
@@ -109,11 +109,11 @@ RandomAccessFile 或许能够满足需求，RandomAccessFile 可以提供一个�
 
 情况A，分隔线完好地存在于buffer中，图中的bundary即为分隔线
 
-![boundary-A](/Pictures/boundary-A.png)
+![boundary-A](/imgs/boundary-A.png)
 
 情况B，分隔线的一部分存在于buffer中
 
-![boundary-B](/Pictures/boundary-B.png)
+![boundary-B](/imgs/boundary-B.png)
 
 在B情况下，`boundary`有多少字节存在于buffer中是不确定的，而且依靠这些不完整的字节根本无法判断他是否属于boundary开头。
 
@@ -123,7 +123,7 @@ RandomAccessFile 或许能够满足需求，RandomAccessFile 可以提供一个�
 
 这个关健区中很有可能存在被截断boundary，每次检查到`pad`开头时立即收手，此位置之前的数据可以确保没有boundary，在下次填充buffer时，将这个关健区中的数据复制到buffer开头再处理。很显然，关健区`pad`长度应该等于boundary，如图：
 
-![pad](/Pictures//boundary-C.png)
+![pad](/imgs//boundary-C.png)
 
 ## 关键代码
 

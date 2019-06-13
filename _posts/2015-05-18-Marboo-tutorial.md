@@ -11,7 +11,7 @@ title:        关于软件 Marboo 的一些备忘整理
 
 可以直接在 [Apple 商店](http://itunes.apple.com/us/app/marboo/id880375426?l=zh&ls=1&mt=12)下载得到，作者的[博客](http://blog.marboo.biz)也很好找到。装好 Marboo 之后，工作目录目前就在配置目录，比较深。这里注意 `.media` 文件夹，里面有当前目录的所有配置，包括 **CSS** 样表、软件配置、更改公式支持等等。。。
 
-![Marboo](/Pictures/Marboo/marboo-screenshot.png)
+![Marboo](/imgs/Marboo/marboo-screenshot.png)
 
 > Marboo 的界面分为三栏，左栏－目录栏，中栏－文件栏，右栏－页面栏，支持 vim 操作。
 
@@ -162,10 +162,10 @@ $(document).ready(function(){
     var getPics = document.getElementsByTagName("img");
     for (var i = getPics.length - 1; i >= 0; i--) {
         var picUrl = getPics[i].src;
-        var ins = picUrl.indexOf("/Pictures");
+        var ins = picUrl.indexOf("/imgs");
         var oldSrc = picUrl.substring(ins,picUrl.length);
         var newSrc = ".." + oldSrc;
-        if (oldSrc.indexOf("/Pictures") == 0) {
+        if (oldSrc.indexOf("/imgs") == 0) {
             $("img[src*='"+oldSrc+"']").attr('src',newSrc);
         }
     }
@@ -179,19 +179,19 @@ $(document).ready(function(){
 
 因为 Marboo 中对 YAML 头并没有识别，所以我写的博客文件在 Marboo 中显示并不美观。
 
-![Ugly Title](/Pictures/Marboo/marboo_title_origin.png)
+![Ugly Title](/imgs/Marboo/marboo_title_origin.png)
 
 > **YAML** 头信息完全识别错误
 
 我们查看相应的 HTML 代码，发现其解析结果如下所示。
 
-![HTML Source](/Pictures/Marboo/marboo_html_code.png)
+![HTML Source](/imgs/Marboo/marboo_html_code.png)
 
 > 解析结果可以看到我们可以发现其误分析的规则
 
 利用其误分析的规则，我就可以添加一段 **JS** 来美化一下标题部分了，修改过后就如同正常标题一样居中显示了。
 
-![Finished Title](/Pictures/Marboo/marboo_title_handled.png)
+![Finished Title](/imgs/Marboo/marboo_title_handled.png)
 
 > 处理过后的标题显示
 

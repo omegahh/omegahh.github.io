@@ -30,7 +30,7 @@ After downloading ST3 ...
 3. 以后安装了相应插件后，可以通过快捷键 `Cmd`+`Shift`+`P` 后调用这些插件的功能，也可以通过绑定相应的快捷键执行这些功能。
 
 可以在[官方文档](https://sublime.wbond.net/docs/usage)中去查看更多命令的用法。
-![Package Control](/Pictures/subl-package-control.png)
+![Package Control](/imgs/subl-package-control.png)
 
 ### 创建一个 Custom Setting File
 
@@ -154,7 +154,7 @@ After downloading ST3 ...
 
 [SideBarEnhancements](https://sublime.wbond.net/packages/SideBarEnhancements) 拓展了侧边栏的功能，安装了这个插件过后，ST3 的侧边栏对文件的操作更加丰富。
 
-![SideBarEnhancements](/Pictures/subl-sidebar.png)
+![SideBarEnhancements](/imgs/subl-sidebar.png)
 
 ### SublimeCodeIntel
 
