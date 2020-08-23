@@ -2,3 +2,5 @@
 *.DS_Store
 .localized
 *.localized
+.jekyll-cache
+_site
