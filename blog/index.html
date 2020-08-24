@@ -11,7 +11,7 @@ keywords: Bumble Bee, Omega, Jekyll, Geeker
     </hgroup>
 </section>
 <article class="lotus-article">
-{%- for rpost in site.posts limit:3 -%}
+{% for rpost in site.posts limit:3 %}
     <h3><a href="{{ site.url }}{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></h3>
     <p itemprop="description">{% if rpost.excerpt.size > 32 %}{{ rpost.excerpt }}{% else %}{{ rpost.content | strip_html | strip_newlines | truncate: 160 }}{% endif %}</p>
 {% endfor %}
@@ -19,8 +19,7 @@ keywords: Bumble Bee, Omega, Jekyll, Geeker
 <section class="lotus-double fn-clear">
     <article class="article article-first">
     <h3>Older Posts</h3>
-        <ul>
-            {% for npost in site.posts limit:3 offset:3 %}
+        <ul>{% for npost in site.posts limit:3 offset:3 %}
             <li><a href="{{ site.url }}{{ npost.url }}" pubdate="{{ npost.date | date_to_utc | date: '%Y-%m-%d' }}" title="{{ npost.title }}" rel="bookmark">{{ npost.title }}</a></li>
             {% endfor %}
         </ul>
@@ -28,12 +27,9 @@ keywords: Bumble Bee, Omega, Jekyll, Geeker
     <article class="article article-last">
     <h3>Related Pages</h3>
     <ul>
-        <li>
-            {% for page in site.page %}
+        <li>{% for page in site.page %}
             <a href="{{ page.url }}" rel="bookmark" title="{{page.text}}">{{ page.text }}</a>
-            {% if page.last == 'false' %}
-                <span class="lotus-squ">|</span>
-            {% endif %}
+            {%- if page.last == true -%}<span class="lotus-squ">|</span>{%- endif -%}
             {% endfor %}
         </li>
     </ul>
