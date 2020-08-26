@@ -8,7 +8,7 @@ Theme Name: iLotus
 *************************/
 @font-face {
   font-family: 'PT Serif';
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   src: local('PT Serif Bold'), local('PTSerif-Bold'), url(../fonts/PTSerifBold.woff) format('woff');
 }
