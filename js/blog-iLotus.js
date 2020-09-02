@@ -200,4 +200,18 @@ $(document).ready(function() {
         }
     };
     iLotus.init.run();
+    // Added by Omega, for parsing img tag and convert the next tag (backquote) to be figcaption then wrap them together
+    var img_list = document.getElementsByTagName('img');
+    for (var i=0; i<img_list.length; i++) {
+        var pgh_dom = img_list[i].parentNode;
+        var bkq_dom = pgh_dom.nextElementSibling;
+        var fig_node = document.createElement('figure');
+        var cap_node = document.createElement('figcaption');
+        fig_node.append(pgh_dom.firstChild);
+        cap_node.append(bkq_dom.firstElementChild);
+        fig_node.append(cap_node)
+        pgh_dom.parentNode.insertBefore(fig_node, bkq_dom);
+        pgh_dom.parentNode.removeChild(pgh_dom);
+        bkq_dom.parentNode.removeChild(bkq_dom);
+    }
 });

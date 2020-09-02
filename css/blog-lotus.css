@@ -847,3 +847,24 @@ pre code { background: none; border: none; }
   .search-tool ul { width: 90%; margin: 0 3%; }
   .search-content { width: 90%; margin: 0 3%; top: 6%; }
 }
+
+/*Styles for figure and figcaption, added by Omega*/
+figure {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    padding: 2px;
+    margin-bottom: 1em;
+}
+
+figcaption {
+    background-color: #333;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+
+figcaption>p {
+  margin: 0px !important;
+}
