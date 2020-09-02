@@ -195,11 +195,10 @@ $(document).ready(function() {
     iLotus.init = {
         run: function() {
             iLotus.goTop.run();
-            iLotus.changeTheme.init();
+            // iLotus.changeTheme.init();
             iLotus.search.run();
         }
     };
-    iLotus.init.run();
     // Added by Omega, for parsing img tag and convert the next tag (backquote) to be figcaption then wrap them together
     var img_list = document.getElementsByTagName('img');
     for (var i=0; i<img_list.length; i++) {
@@ -214,4 +213,5 @@ $(document).ready(function() {
         pgh_dom.parentNode.removeChild(pgh_dom);
         bkq_dom.parentNode.removeChild(bkq_dom);
     }
+    iLotus.init.run();
 });
