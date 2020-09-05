@@ -131,7 +131,7 @@ $$
 以上的性能计算在 **Matlab** 中的实现也很简单：
 
 ~~~matlab
-    [FPR,TPR,Thresh,AUC,OPTROCPT] = perfcurve(labels,scores,posclass)
+[FPR,TPR,Thresh,AUC,OPTROCPT] = perfcurve(labels,scores,posclass)
 ~~~
 
 ## MAP
