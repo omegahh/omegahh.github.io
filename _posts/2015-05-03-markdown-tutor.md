@@ -26,14 +26,14 @@ $$E=mc^2$$
 
 ~~~python
 class AdView (object):
-    def __init__ (self, name = None):
-        self.name = name
+	def __init__ (self, name = None):
+		self.name = name
 
-    def test (self):
-        if self.name == 'admin':
-            return False
-        else
-            return True
+	def test (self):
+		if self.name == 'admin':
+			return False
+		else
+			return True
 ~~~
 
 这是一段 C++ 代码：
@@ -42,16 +42,15 @@ class AdView (object):
 #include <iostream>
 
 int main(int argc, char *argv[]) {
+	//* An annoying "Hello World" example
+	for (auto i = 0; i < 0xFFFF; i++)
+		cout << "Hello, World!" << endl;
 
-  /* An annoying "Hello World" example */
-  for (auto i = 0; i < 0xFFFF; i++)
-    cout << "Hello, World!" << endl;
+	char c = '\n';
+	unordered_map <string, vector<string> > m;
+	m["key"] = "\\\\"; // this is an error
 
-  char c = '\n';
-  unordered_map <string, vector<string> > m;
-  m["key"] = "\\\\"; // this is an error
-
-  return -2e3 + 12l;
+	return -2e3 + 12l;
 }
 ~~~
 
@@ -83,11 +82,11 @@ HTML 的区段（行内）标签如 `<span>`, `<cite>`, `<del>` 可以在Markdow
 
 `&` 字符尤其让网络文档编写者受折磨，如果你要打「`AT&T`」 ，你必须要写成「`AT&T`」。而网址中的 `&` 字符也要转换。比如你要链接到：
 
-    http://images.google.com/images?num=30&q=larry+bird
+	http://images.google.com/images?num=30&q=larry+bird
 
 你必须要把网址转换写为：
 
-    http://images.google.com/images?num=30&amp;q=larry+bird
+	http://images.google.com/images?num=30&amp;q=larry+bird
 
 才能放到链接标签的 `href` 属性里。不用说也知道这很容易忽略，这也可能是 HTML 标准检验所检查到的错误中，数量最多的。
 
@@ -95,23 +94,23 @@ Markdown 让你可以自然地书写字符，需要转换的由它来处理好�
 
 所以你如果要在文档中插入一个版权符号 `©`，你可以这样写：
 
-    &copy;
+	&copy;
 
 Markdown 会保留它不动。而若你写：
 
-    AT&T
+	AT&T
 
 Markdown 就会将它转为：
 
-    AT&amp;T
+	AT&amp;T
 
 类似的状况也会发生在 `<` 符号上，因为 Markdown 允许兼容 HTML，如果你是把 `<` 符号作为 HTML 标签的定界符使用，那 Markdown 也不会对它做任何转换，但是如果你写：
 
-    4 < 5
+	4 < 5
 
 Markdown 将会把它转换为：
 
-    4 &lt; 5
+	4 &lt; 5
 
 不过需要注意的是，code 范围内，不论是行内还是区块， `<` 和 `&` 两个符号都*一定*会被转换成 HTML 实体，这项特性让你可以很容易地用 Markdown 写 HTML code （和 HTML 相对而言， HTML 语法中，你要把所有的 `<` 和 `&` 都转换为 HTML 实体，才能在 HTML 文件里面写出 HTML code。）
 
@@ -126,11 +125,11 @@ Markdown 将会把它转换为：
 ~~~Makefile
 markdown: kramdown
 kramdown:
-  input: GFM
-  extensions:
-    - autolink
-    - footnotes
-    - smart
+	input: GFM
+	extensions:
+		- autolink
+		- footnotes
+		- smart
 ~~~
 
 在页面中加上需要加载的样式和脚本，[highligt.js](https://highlightjs.org/usage/)来达到高亮：
@@ -140,9 +139,9 @@ kramdown:
 <script src="/path/to/highlight.pack.js"></script>
 <script>
 	$(document).ready(function() {
-	  $("code[class*='language']").each(function(i, block) {
-	    hljs.highlightBlock(block);
-	  });
+		$("code[class*='language']").each(function(i, block) {
+			hljs.highlightBlock(block);
+		});
 	});
 </script>
 ~~~
@@ -152,28 +151,28 @@ kramdown:
 ~~~javascript
 <!--//数学公式支持-->
 <script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		tex2jax: {
+			inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+			processEscapes: true
+		}
+	});
+</script>
+
+<script type="text/x-mathjax-config">
 MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        processEscapes: true
-    }
+	tex2jax: {
+		skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+	}
 });
 </script>
 
 <script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-    });
-</script>
-
-<script type="text/x-mathjax-config">
 MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-       all[i].SourceElement().parentNode.className += ' has-jax';
-    }
+	var all = MathJax.Hub.getAllJax(), i;
+	for(i=0; i < all.length; i += 1) {
+		all[i].SourceElement().parentNode.className += ' has-jax';
+	}
 });
 </script>
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
