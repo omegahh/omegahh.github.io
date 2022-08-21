@@ -29,14 +29,14 @@ timezone:      null
 #site config
 title: Bumble Bee
 subTitle: Starving for Knowledge.
-url: http://omegaxy.com
+url: https://omegaxy.com
 feed: /atom.xml
 author: Omega
 
 # Related Pages
 page:
   - text: Main Page
-    url: http://omegaxy.com
+    url: https://omegaxy.com
     last: true
   - text: Friend Links
     url: /blog/links.html
