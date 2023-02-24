@@ -45,7 +45,7 @@ title:        为博客添加 DisQus 评论
 	var disqus_shortname = 'example'; // 注意，这里的 example 要替换为你自己的短域名
 	/* * * 下面这些不需要改动 * * */
 	(function() {
-	  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 		dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
 		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 })();
