@@ -4,3 +4,4 @@
 *.localized
 .jekyll-cache
 _site
+.obsidian
