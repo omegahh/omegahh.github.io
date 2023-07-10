@@ -55,6 +55,10 @@ html {
 
 /* CSS normalize finished */
 
+:root {
+	--animate-duration: 1s;
+}
+
 @media screen and (min-width: 992px) {
     .container {
         padding-right: 40px;
@@ -127,6 +131,12 @@ nav.main-navigation {
     }
 }
 
+@media screen and (max-width: 992px) {
+	.menu-responsive {
+		display: none;
+	}
+}
+
 ul.main-menu li {
     display: inline-block;
     margin-left: 10px;
@@ -169,23 +179,6 @@ ul.main-menu li a.active {
     }
 }
 
-/* Bootstrap Media querys: */
-/* xs: Extra small devices (portrait phones, less than 576px) */
-/* sm: Small devices (landscape phones, 576px and up) */
-/* md: Medium devices (tablets, 768px and up) */
-/* lg: Large devices (desktops, 992px and up) */
-/* xl: Extra large devices (large desktops, 1200px and up) */
-
-/* Omega HH viewed @2023-07-09 */
-
-.overlay h4 {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
 .content {
     display: none;
 }
@@ -199,42 +192,32 @@ ul.main-menu li a.active {
     line-height: 1.85;
     width: 80%;
     margin: 0 auto;
-    -moz-animation-delay: 0.5s;
-    -webkit-animation-delay: 0.5s;
-    animation-delay: 0.5s;
+    /* animation-delay: 0.5s; */
 }
 
 h2.welcome-title {
-    font-weight: 100;
+    font-weight: 300;
     color: #fff;
     font-size: 48px;
     margin-bottom: 30px;
-    -moz-animation-delay: 0.1s;
-    -webkit-animation-delay: 0.1s;
-    animation-delay: 0.1s;
+
+	animation: fadeInLeft;
+	animation-duration: 1.5s;
+    /* animation-delay: 0.1s; */
+}
+
+.welcome-subtitle {
+	opacity: 0;
+	animation: fadeInRight;
+	animation-duration: 1.5s;
+	animation-delay: 0.1s;
+	animation-fill-mode: forwards;
 }
 
 @media screen and (max-width: 992px) {
     h2.welcome-title {
         font-size: 36px;
     }
-}
-
-.list-icons {
-    margin-top: 60px;
-    -moz-animation-delay: 0.9s;
-    -webkit-animation-delay: 0.9s;
-    animation-delay: 0.9s;
-}
-
-.list-icons li {
-    display: inline-block;
-    margin: 15px 40px;
-}
-
-.list-icons li i {
-    font-size: 45px;
-    color: #fff;
 }
 
 .home-projects {
@@ -253,12 +236,19 @@ h2.welcome-title {
 }
 
 .project-title {
+	opacity: 0;
     padding: 60px;
     background: #46494f;
     margin-bottom: 20px;
-    -moz-animation-delay: 0.5s;
-    -webkit-animation-delay: 0.5s;
+	animation: fadeInUp;
+	animation-duration: 2s;
     animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.project-title p {
+	font-size: 18px;
+	font-weight: 400;
 }
 
 .project-item {
@@ -266,9 +256,8 @@ h2.welcome-title {
     position: relative;
     overflow: hidden;
     border: 3px solid #1a1c1f;
-    -moz-backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+	animation: fadeInRight;
 }
 
 .project-item img {
@@ -276,6 +265,38 @@ h2.welcome-title {
     display: block;
 }
 
+.project-item.one {
+	opacity: 0;
+	animation-duration: 1s;
+    animation-delay: 1s;
+	animation-fill-mode: forwards;
+}
+
+.project-item.two {
+	opacity: 0;
+	animation-duration: 1s;
+    animation-delay: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+.project-item.three {
+	opacity: 0;
+	animation-duration: 1s;
+    animation-delay: 2s;
+	animation-fill-mode: forwards;
+}
+
+.project-item.four {
+	opacity: 0;
+	animation-duration: 1s;
+    animation-delay: 2.5s;
+	animation-fill-mode: forwards;
+}
+
+.project-item:hover .overlay {
+    opacity: 1;
+    transform: rotate(0);
+}
 .overlay {
     position: absolute;
     width: 100%;
@@ -285,58 +306,43 @@ h2.welcome-title {
     background: rgba(169,91,195,0.9);
     text-align: center;
     opacity: 0;
-    -webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
-    -ms-transition: all 200ms ease-in-out;
-    -o-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-
 .overlay h4 {
-    font-size: 18px;
+	font-size: 18px;
+	font-weight: 300;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
-
 .overlay h4 a {
     color: #fff;
 }
 
-.project-item:hover .overlay {
-    opacity: 1;
-    -moz-transform: rotate(0);
-    -ms-transform: rotate(0);
-    -o-transform: rotate(0);
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-}
+/* Bootstrap Media querys: */
+/* xs: Extra small devices (portrait phones, less than 576px) */
+/* sm: Small devices (landscape phones, 576px and up) */
+/* md: Medium devices (tablets, 768px and up) */
+/* lg: Large devices (desktops, 992px and up) */
+/* xl: Extra large devices (large desktops, 1200px and up) */
 
-.project-item.one {
-    -moz-animation-delay: 0.5s;
-    -webkit-animation-delay: 0.5s;
-    animation-delay: 0.5s;
-}
+/* Omega HH viewed @2023-07-09 */
 
-.project-item.two {
-    -moz-animation-delay: 1s;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-}
-
-.project-item.three {
-    -moz-animation-delay: 1.5s;
-    -webkit-animation-delay: 1.5s;
-    animation-delay: 1.5s;
-}
-
-.project-item.four {
-    -moz-animation-delay: 2s;
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
-}
+/* .list-icons { */
+/*     margin-top: 60px; */
+/*     animation-delay: 0.9s; */
+/* } */
+/**/
+/* .list-icons li { */
+/*     display: inline-block; */
+/*     margin: 15px 40px; */
+/* } */
+/**/
+/* .list-icons li i { */
+/*     font-size: 45px; */
+/*     color: #fff; */
+/* } */
 
 .our-story {
     padding: 0 50px;
@@ -354,18 +360,22 @@ h2.welcome-title {
     height: 100%;
     top: 0;
     left: 0;
-    -moz-animation-delay: 1.7s;
-    -webkit-animation-delay: 1.7s;
+	opacity: 0;
+	animation: fadeIn;
+	animation-duration: 1.5s;
     animation-delay: 1.7s;
+	animation-fill-mode: forwards;
 }
 
 .inner-story {
     background: #fff;
     padding: 40px;
     color: #32353a;
-    -moz-animation-delay: 0.5s;
-    -webkit-animation-delay: 0.5s;
+	opacity: 0;
+	animation: fadeInRight;
+	animation-duration: 2s;
     animation-delay: 0.5s;
+	animation-fill-mode: forwards;
 }
 
 .inner-story h2 {
@@ -373,6 +383,7 @@ h2.welcome-title {
 }
 
 .inner-story p {
+	font-size: 16px;
     margin-bottom: 0;
 }
 

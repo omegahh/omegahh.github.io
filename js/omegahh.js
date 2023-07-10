@@ -43,8 +43,6 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 
-
-
 	$('a.toggle-nav').click(function(){
 		$('.menu-responsive').slideToggle();
 	});
