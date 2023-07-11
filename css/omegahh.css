@@ -320,30 +320,6 @@ h2.welcome-title {
     color: #fff;
 }
 
-/* Bootstrap Media querys: */
-/* xs: Extra small devices (portrait phones, less than 576px) */
-/* sm: Small devices (landscape phones, 576px and up) */
-/* md: Medium devices (tablets, 768px and up) */
-/* lg: Large devices (desktops, 992px and up) */
-/* xl: Extra large devices (large desktops, 1200px and up) */
-
-/* Omega HH viewed @2023-07-09 */
-
-/* .list-icons { */
-/*     margin-top: 60px; */
-/*     animation-delay: 0.9s; */
-/* } */
-/**/
-/* .list-icons li { */
-/*     display: inline-block; */
-/*     margin: 15px 40px; */
-/* } */
-/**/
-/* .list-icons li i { */
-/*     font-size: 45px; */
-/*     color: #fff; */
-/* } */
-
 .our-story {
     padding: 0 50px;
     margin-top: 30px;
@@ -352,7 +328,7 @@ h2.welcome-title {
 }
 
 .story-bg {
-    background: url("../photos/story-bg.jpg");
+    background: url("../photos/story-bg-min.webp");
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
@@ -387,6 +363,15 @@ h2.welcome-title {
     margin-bottom: 0;
 }
 
+/* Bootstrap Media querys: */
+/* xs: Extra small devices (portrait phones, less than 576px) */
+/* sm: Small devices (landscape phones, 576px and up) */
+/* md: Medium devices (tablets, 768px and up) */
+/* lg: Large devices (desktops, 992px and up) */
+/* xl: Extra large devices (large desktops, 1200px and up) */
+
+/* Omega HH viewed @2023-07-09 */
+
 .our-offers {
     margin-top: 3px;
     padding: 0 50px;
@@ -396,7 +381,7 @@ h2.welcome-title {
 }
 
 .offer-bg {
-    background: url("../photos/offer-bg.jpg");
+    background: url("../photos/hobby-bg-min.webp");
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
@@ -404,9 +389,11 @@ h2.welcome-title {
     height: 69%;
     top: 0;
     left: 0;
-    -moz-animation-delay: 3.6s;
-    -webkit-animation-delay: 3.6s;
+	opacity: 0;
+	animation: fadeIn;
+	animation-duration: 1.5s;
     animation-delay: 3.6s;
+	animation-fill-mode: forwards;
 }
 
 .offer-title {
@@ -414,9 +401,11 @@ h2.welcome-title {
     padding: 30px;
     background: #fff;
     margin-bottom: 40px;
-    -moz-animation-delay: 1.2s;
-    -webkit-animation-delay: 1.2s;
-    animation-delay: 1.2s;
+	opacity: 0;
+	animation: fadeInDown;
+	animation-duration: 2s;
+    animation-delay: 2s;
+	animation-fill-mode: forwards;
 }
 
 .offer-item {
@@ -431,6 +420,22 @@ h2.welcome-title {
 .offer-item figure img {
     width: 100%;
     display: block;
+}
+
+.offer-1 {
+	opacity: 0;
+	animation: fadeInLeft;
+	animation-duration: 2s;
+    animation-delay: 2.1s;
+	animation-fill-mode: forwards;
+}
+
+.offer-2 {
+	opacity: 0;
+	animation: fadeInRight;
+	animation-duration: 2s;
+    animation-delay: 2.8s;
+	animation-fill-mode: forwards;
 }
 
 .offer-content {
@@ -489,18 +494,6 @@ span.offer-right {
     border-bottom: 15px solid #32353a;
     left: 0px;
     top: 0px;
-}
-
-.offer-1 {
-    -moz-animation-delay: 2.1s;
-    -webkit-animation-delay: 2.1s;
-    animation-delay: 2.1s;
-}
-
-.offer-2 {
-    -moz-animation-delay: 2.8s;
-    -webkit-animation-delay: 2.8s;
-    animation-delay: 2.8s;
 }
 
 .projects-header {
