@@ -220,18 +220,18 @@ h2.welcome-title {
     }
 }
 
-.home-projects {
+.home-contents {
     margin-bottom: 100px;
 }
 
-.home-projects h2 {
+.home-contents h2 {
     color: #fff;
     font-size: 36px;
     margin-top: 0;
     margin-bottom: 35px;
 }
 
-.home-projects p {
+.home-contents p {
     margin-bottom: 32px;
 }
 
@@ -257,7 +257,6 @@ h2.welcome-title {
     overflow: hidden;
     border: 3px solid #1a1c1f;
     backface-visibility: hidden;
-	animation: fadeInRight;
 }
 
 .project-item img {
@@ -267,6 +266,7 @@ h2.welcome-title {
 
 .project-item.one {
 	opacity: 0;
+	animation: fadeInRight;
 	animation-duration: 1s;
     animation-delay: 1s;
 	animation-fill-mode: forwards;
@@ -274,6 +274,7 @@ h2.welcome-title {
 
 .project-item.two {
 	opacity: 0;
+	animation: fadeInRight;
 	animation-duration: 1s;
     animation-delay: 1.5s;
 	animation-fill-mode: forwards;
@@ -281,6 +282,7 @@ h2.welcome-title {
 
 .project-item.three {
 	opacity: 0;
+	animation: fadeInRight;
 	animation-duration: 1s;
     animation-delay: 2s;
 	animation-fill-mode: forwards;
@@ -288,6 +290,7 @@ h2.welcome-title {
 
 .project-item.four {
 	opacity: 0;
+	animation: fadeInRight;
 	animation-duration: 1s;
     animation-delay: 2.5s;
 	animation-fill-mode: forwards;
@@ -370,14 +373,12 @@ h2.welcome-title {
 /* lg: Large devices (desktops, 992px and up) */
 /* xl: Extra large devices (large desktops, 1200px and up) */
 
-/* Omega HH viewed @2023-07-09 */
-
 .our-offers {
     margin-top: 3px;
     padding: 0 50px;
     position: relative;
     overflow: hidden;
-    margin-bottom: 120px;
+    margin-bottom: 100px;
 }
 
 .offer-bg {
@@ -503,99 +504,41 @@ span.offer-right {
 }
 
 .projects-header h2 {
-    font-weight: 100;
+    font-weight: 300;
     color: #fff;
     font-size: 36px;
     margin-bottom: 30px;
-    -moz-animation-delay: 0.5s;
-    -webkit-animation-delay: 0.5s;
-    animation-delay: 0.5s;
 }
 
 .projects-header p {
     font-size: 17px;
     line-height: 1.75em;
-    -moz-animation-delay: 1s;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
 }
 
 .projects-holder {
     margin-bottom: 80px;
 }
 
-.p-1 {
-    -moz-animation-delay: 1.7s;
-    -webkit-animation-delay: 1.7s;
-    animation-delay: 1.7s;
+@keyframes ScaleIn {
+    0% { opacity: 0;transform: scale(1.1); }
+    100% { opacity: 1;transform: scale(1); }
 }
 
-.p-2 {
-    -moz-animation-delay: 2s;
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
+.animatescalein {
+	opacity: 0;
+	animation: ScaleIn 0.4s ease-in;
+	animation-fill-mode: forwards;
 }
 
-.p-3 {
-    -moz-animation-delay: 2.3s;
-    -webkit-animation-delay: 2.3s;
-    animation-delay: 2.3s;
-}
+.project-item.proj1 { animation-delay: 0.5s; }
+.project-item.proj2 { animation-delay: 0.8s; }
+.project-item.proj3 { animation-delay: 1.1s; }
+.project-item.proj4 { animation-delay: 1.4s; }
+.project-item.proj5 { animation-delay: 1.7s; }
+.project-item.proj6 { animation-delay: 2.0s; }
+.project-item.proj7 { animation-delay: 2.3s; }
 
-.p-4 {
-    -moz-animation-delay: 2.6s;
-    -webkit-animation-delay: 2.6s;
-    animation-delay: 2.6s;
-}
-
-.p-5 {
-    -moz-animation-delay: 2.9s;
-    -webkit-animation-delay: 2.9s;
-    animation-delay: 2.9s;
-}
-
-.p-6 {
-    -moz-animation-delay: 3.1s;
-    -webkit-animation-delay: 3.1s;
-    animation-delay: 3.1s;
-}
-
-.p-7 {
-    -moz-animation-delay: 3.4s;
-    -webkit-animation-delay: 3.4s;
-    animation-delay: 3.4s;
-}
-
-.blog-posts {
-    margin-bottom: 80px;
-}
-
-.blog-item {
-    position: relative;
-    overflow: hidden;
-    @extned %clearfix;;padding: 20px;
-    color: #6d747e;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.blog-item a {
-    color: #32353a;
-}
-
-.blog-item h3 {
-    font-size: 20px;
-    font-weight: normal;
-    letter-spacing: 1px;
-}
-
-.blog-item:hover .blog-bg {
-    -moz-transform: scale(1.2, 1.2);
-    -ms-transform: scale(1.2, 1.2);
-    -o-transform: scale(1.2, 1.2);
-    -webkit-transform: scale(1.2, 1.2);
-    transform: scale(1.2, 1.2);
-}
+/* Omega HH viewed @2023-07-09 */
 
 span.solid-line {
     width: 60px;
@@ -630,18 +573,6 @@ span.solid-line {
     -ms-transition: all 200ms ease-in-out;
     -o-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
-}
-
-.blog-blue {
-    background: url("../photos/blog-blue.jpg");
-}
-
-.blog-pink {
-    background: url("../photos/blog-pink.jpg");
-}
-
-.blog-green {
-    background: url("../photos/blog-green.jpg");
 }
 
 .post-1 {
@@ -963,7 +894,7 @@ span[class*="border-"] {
     right: 20px;
     width: 50px;
     height: 50px;
-    background: url("../photos/shape-1.png") no-repeat;
+	background-image: url("data:image/webp;base64,UklGRrgAAABXRUJQVlA4WAoAAAAQAAAAMQAAMQAAQUxQSFgAAAABFyAQSFKffI2ICAdIjSRJkmLuJbihfCaURG8YIvo/Af3Xz9jaWWpja2epja2dpTa2dpba2NpZamNrZ6mNrZ2lNrZ2ltrY2llqY2tnqY2tnaU2tnaWr/0BVlA4IDoAAADQAwCdASoyADIAPpFIoEwlpCMiIggAsBIJaQDT2AWb2Fl0hcYBRAAA/vS8+8FTpXOVRRabC4gAAAAA");
 }
 
 .shape-2 {
@@ -972,7 +903,7 @@ span[class*="border-"] {
     left: 20px;
     width: 50px;
     height: 50px;
-    background: url("../photos/shape-2.png") no-repeat;
+	background-image: url("data:image/webp;base64,UklGRrIAAABXRUJQVlA4WAoAAAAQAAAAMQAAMQAAQUxQSFIAAAABFyAQSELffI2ICAczbdtM/QpkkAZtlI0hov8TkOHa2tvFamtvF6utvV2stvZ2sdra28Vqa28Xq629Xay29nax2trbxWprbxerrb1drLb2drECVlA4IDoAAADQAwCdASoyADIAPpFIoEwlpCMiIggAsBIJaQDT2AWb2Fl0hcYBRAAA/vS8+8FTpXOVRRabC4gAAAAA");
 }
 
 .main-footer .social li a {
