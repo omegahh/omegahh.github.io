@@ -12,7 +12,6 @@
 	</head>
 
 	<body>
-
 		<!-- Navigation bar -->
 		<header class="site-header container">
 			<div class="header-wrapper">
@@ -225,20 +224,20 @@
 
 			<div id="menu-4" class="content blog-section container">
 				<div class="blog-header text-center">
-					<h2 class="animated fadeInRight" href="/blog">Bumble Bee</h2>
-					<p class="animated fadeInLeft" align="left" style="width: 90%; display: block; margin-left: auto; margin-right: auto"><span class="blue">Bumble Bee</span> is a static blog built by Jekyll (a powerful framework could compile static blogs from markdown files automatically.). At the begining, I spend too much time in webpage design while no blog was posted. I realized that my main job should be writing more blogs. Thus I chose a suitable template and focus on writing quickly. <span class="blue">iLotus</span> is my final choice. It's a beautiful theme forked from <a href="http://www.zhanxin.info">Pizn</a>. And it is simple and comfortable for reading. Additionally, I also add many new custom features, like code highlight, quickly search and math formulation supports, to enrich its functions. Within these powerful tools, I really enjoy the processes of writing blogs.</p>
-					<p class="animated zoomIn"><span class="green">Announcement</span>: Posts in the blog are under the Creative Common Lisence.</p>
-					<ul class="main-button animated zoomIn enterblog">
-						<li class="" style=""><a target="_blank" href="/blog">ENTER THE BLOG</a></li>
+					<h2 class="welcome-title" href="/blog">Bumble Bee</h2>
+					<p class="welcome-subtitle" align="left" style="width: 90%; display: block; margin-left: auto; margin-right: auto"><span class="blue">Bumble Bee</span> is a static blog built by Jekyll (a powerful framework could compile static blogs from markdown files automatically.). At the begining, I spend too much time in webpage design while no blog was posted. I realized that my main job should be writing more blogs. Thus I chose a suitable template and focus on writing quickly. <span class="blue">iLotus</span> is my final choice. It's a beautiful theme forked from <a href="http://www.zhanxin.info">Pizn</a>. And it is simple and comfortable for reading. Additionally, I also add many new custom features, like code highlight, quickly search and math formulation supports, to enrich its functions. Within these powerful tools, I really enjoy the processes of writing blogs.</p>
+					<p class="blog-announcement"><span class="green">Announcement</span>: Posts in the blog are under the Creative Common Lisence.</p>
+					<ul class="animated zoomIn enterblog">
+						<li class="blog-button" style=""><a target="_blank" href="/blog">ENTER THE BLOG</a></li>
 					</ul>
 				</div>
 			</div>
 
 			<div id="menu-5" class="content contact-section container">
 				<div class="contact-header text-center">
-					<h2 class="animated fadeInLeft">Get in Touch</h2>
-					<p class="animated fadeInRight">Welcome to talk with me about anything.</p>
-					<ul class="contact-social animated fadeInUp">
+					<h2>Get in Touch</h2>
+					<p>Welcome to talk with me about anything.</p>
+					<ul class="contact-social">
 						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 						<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
 						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
@@ -247,12 +246,12 @@
 				</div>
 				<div class="contact-holder">
 					<div class="row">
-						<div class="col-md-6 col-sm-12">
-							<div class="googlemap-wrapper animated fadeInLeft">
-								<div id="map_canvas" class="map-canvas"></div>
+						<div class="col-lg-6 d-none d-lg-block">
+							<div class="canvas-holder" id="fractal">
+							<canvas id="canvas", style="width: 100%; height: 100%;"></canvas>
 							</div>
 						</div>
-						<div class="col-md-6 col-sm-12">
+						<div class="col-lg-6 col-md-12">
 							<div class="contact-form animated fadeInUp">
 								<h4>Send me a Message</h4>
 								<div class="row">
@@ -307,5 +306,6 @@
 
 		<script src="js/jquery-3.7.0.min.js"></script>
 		<script src="js/omegahh.js"></script>
+		<script src="js/fractal.js"></script>
 	</body>
 </html>

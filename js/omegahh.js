@@ -39,7 +39,6 @@ jQuery(document).ready(function($) {
 	$(".main-menu a.contactbutton").click(function(){
 		$("#menu-container .content").fadeOut();
 		$("#menu-container .contact-section").slideDown('slow');
-		loadScript();
 		return false;
 	});
 
@@ -57,21 +56,3 @@ jQuery(document).ready(function($) {
 
 });
 
-
-function loadScript() {
-	  var script = document.createElement('script');
-	  script.type = 'text/javascript';
-	 /* script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
-	      'callback=initialize';*/
-	 script.src = 'https://maps.google.com/maps/api/js?v=3.exp&sensor=false&' + 'callback=initialize';
-	  document.body.appendChild(script);
-	}
-
-	function initialize() {
-	    var mapOptions = {
-	      zoom: 15,
-	      center: new google.maps.LatLng(32.113101, 118.959958),
-	      mapTypeId: google.maps.MapTypeId.ROADMAP
-	    };
-	    var map = new google.maps.Map(document.getElementById('map_canvas'),  mapOptions);
-	}
