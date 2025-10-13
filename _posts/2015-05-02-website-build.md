@@ -11,7 +11,7 @@ title:        在 AWS 上搭建一个 Jekyll 博客
 
 **具体流程**：在本地用文本编辑器编写 **.md** 文件，通过 **Marboo** 预览。然后在服务器上建立 **Git 仓库**，欲发表的博文 **push** 到该仓库，同时网站的模版放置于公开的 **Github** 中，方便管理与同步。服务器为 **AWS EC2** 的虚拟主机，可以通过 **SSH** 登陆管理。服务器端配置好 **Apache** 服务器（同时可配置 **WebDav** 做同步盘），利用 **Crontab** 每天定时 **pull** 最新的博客文章，并使用 **Jekyll** 编译为可访问的网站。
 
-![大致框架](/imgs/jekyll-aws.png)
+![大致框架](/imgs/jekyll-aws.webp)
 
 > **一切为了什么**：我想这一切的一切都是因为 **电脑洁癖** ！
 
@@ -56,7 +56,7 @@ title:        在 AWS 上搭建一个 Jekyll 博客
 
 接下来就是 LAMP 的配置，其实这时候你在浏览器访问你的主机 IP 就已经有个示例页面了：
 
-![Apache 演示页面](/imgs/apache2-installed.png)
+![Apache 演示页面](/imgs/apache2-installed.webp)
 
 #### 更改网站目录
 

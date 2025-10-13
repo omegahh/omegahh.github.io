@@ -56,9 +56,9 @@ int main(int argc, char *argv[]) {
 
 ### 便捷的插图
 
-![insert image](/imgs/insert_a_image_quickly.png)
+![insert image](/imgs/insert_a_image_quickly.webp)
 
-> 插入一张图片只需要 \!\[foo](/path/toyour/picture.jpg) 即可，路径既可以是相对路径也可以是绝对路径
+> 插入一张图片只需要 \!\[foo](/path/toyour/picture.webp) 即可，路径既可以是相对路径也可以是绝对路径
 
 ### 兼容 HTML
 

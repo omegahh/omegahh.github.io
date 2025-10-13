@@ -38,4 +38,4 @@ done
 
 命令运行效果应该如此：
 
-![trash](/imgs/shell-trash.png)
+![trash](/imgs/shell-trash.webp)
