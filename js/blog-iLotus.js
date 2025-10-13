@@ -173,7 +173,8 @@ $(document).ready(function() {
                         afterSelect: function(item) {
                             $(".search-tool").css("display", "none");
                             isShow = false;
-                            window.location.href = ("http://omegaxy.com/blog/" + urls[names.indexOf(item)]);
+                            // Use relative URL from search.json which already contains full path
+                            window.location.href = urls[names.indexOf(item)];
                         }
                     });
                 }
