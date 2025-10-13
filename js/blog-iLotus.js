@@ -201,7 +201,8 @@ $(document).ready(function() {
         }
     };
     // Added by Omega, for parsing img tag and convert the next tag (backquote) to be figcaption then wrap them together
-    var img_list = document.getElementsByTagName('img');
+    // Convert to static array to avoid issues when modifying DOM during iteration
+    var img_list = Array.from(document.getElementsByTagName('img'));
     for (var i=0; i<img_list.length; i++) {
         var pgh_dom = img_list[i].parentNode;
         var bkq_dom = pgh_dom.nextElementSibling;
