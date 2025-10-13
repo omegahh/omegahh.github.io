@@ -647,6 +647,16 @@ span.solid-line {
 
 .canvas-holder {
 	padding: 20px;
+	width: 100%;
+	height: 500px;
+	min-height: 400px;
+	position: relative;
+}
+
+.canvas-holder canvas {
+	display: block;
+	width: 100% !important;
+	height: 100% !important;
 }
 
 .contact-form {
