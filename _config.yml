@@ -69,3 +69,25 @@ nav:
     class: none
     rel: nofollow
     id: search-btn
+
+# Build optimizations
+incremental: true
+
+# Compress HTML output
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  startings: []
+
+# Exclude files from build
+exclude:
+  - README.md
+  - CLAUDE.md
+  - .gitignore
+  - .obsidian
+  - templates/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
