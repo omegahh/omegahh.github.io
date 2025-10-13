@@ -66,8 +66,43 @@ jQuery(document).ready(function($) {
 		$('.menu-responsive').slideToggle().hide();
 	});
 
-	$(".message-button").click(function(){
-		alert("Error: Not Support Yet!")
+	// Contact form submission handler
+	$('#contact-form').on('submit', function(e) {
+		e.preventDefault();
+
+		var form = $(this);
+		var formData = new FormData(this);
+		var statusDiv = $('#form-status');
+
+		// Disable submit button during submission
+		form.find('button[type="submit"]').prop('disabled', true).text('Sending...');
+
+		$.ajax({
+			url: form.attr('action'),
+			method: 'POST',
+			data: formData,
+			processData: false,
+			contentType: false,
+			dataType: 'json',
+			success: function(response) {
+				statusDiv.css({
+					'display': 'block',
+					'background-color': '#4e91c9',
+					'color': '#fff'
+				}).text('Thank you! Your message has been sent successfully.');
+				form[0].reset();
+			},
+			error: function(xhr, status, error) {
+				statusDiv.css({
+					'display': 'block',
+					'background-color': '#d00',
+					'color': '#fff'
+				}).text('Sorry, there was an error sending your message. Please try again or email directly.');
+			},
+			complete: function() {
+				form.find('button[type="submit"]').prop('disabled', false).text('Submit Message');
+			}
+		});
 	});
 
 });

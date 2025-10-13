@@ -662,6 +662,18 @@ span.solid-line {
     padding: 12px 20px;
     display: inline-block;
     margin-bottom: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.message-button:hover {
+    background: #3a7aa9;
+}
+
+.message-button:disabled {
+    background: #6a6a6a;
+    cursor: not-allowed;
 }
 
 .main-footer {
