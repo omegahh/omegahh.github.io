@@ -1,71 +1,60 @@
 jQuery(document).ready(function($) {
 
-	$(".main-menu a").click(function(){
-		var id =  $(this).attr('class');
-		id = id.split('-');
+	// Unified navigation handler
+	function navigateToSection(sectionClass) {
+		// Update active state
 		$('a.active').removeClass('active');
-    	$(this).addClass('active');
 
-		// Stop fractal animation when leaving contact section
+		// Stop fractal animation when navigating away from contact
 		if (typeof window.stopFractalAnimation === 'function') {
 			window.stopFractalAnimation();
 		}
 
+		// Hide all sections
 		$("#menu-container .content").slideUp('slow');
-		$("#menu-container #menu-"+id[1]).slideDown('slow');
 		$("#menu-container .homepage").slideUp('slow');
-		return false;
-	});
 
-
-	$(".main-menu a.homebutton").click(function(){
-		// Stop fractal animation when leaving contact section
-		if (typeof window.stopFractalAnimation === 'function') {
-			window.stopFractalAnimation();
+		// Show the requested section
+		if (sectionClass) {
+			$("#menu-container ." + sectionClass).slideDown('slow', function() {
+				// Start fractal animation if navigating to contact section
+				if (sectionClass === 'contact-section' && typeof window.startFractalAnimation === 'function') {
+					window.startFractalAnimation();
+				}
+			});
 		}
-		$("#menu-container .content").slideUp('slow');
+	}
+
+	// Navigation button handlers
+	$(".main-menu a.homebutton").click(function(){
+		$(this).addClass('active');
+		navigateToSection(null); // Show homepage
 		$("#menu-container .homepage").slideDown('slow');
 		return false;
 	});
 
 	$(".main-menu a.aboutbutton").click(function(){
-		// Stop fractal animation when leaving contact section
-		if (typeof window.stopFractalAnimation === 'function') {
-			window.stopFractalAnimation();
-		}
-		$("#menu-container .content").slideUp('slow');
-		$("#menu-container .about-section").slideDown('slow');
+		$(this).addClass('active');
+		navigateToSection('about-section');
 		return false;
 	});
 
 	$(".main-menu a.projectbutton").click(function(){
-		// Stop fractal animation when leaving contact section
-		if (typeof window.stopFractalAnimation === 'function') {
-			window.stopFractalAnimation();
-		}
-		$("#menu-container .content").slideUp('slow');
-		$("#menu-container .project-section").slideDown('slow');
+		$(this).addClass('active');
+		navigateToSection('project-section');
 		return false;
 	});
 
 	$(".main-menu a.blogbutton").click(function(){
-		// Stop fractal animation when leaving contact section
-		if (typeof window.stopFractalAnimation === 'function') {
-			window.stopFractalAnimation();
-		}
-		$("#menu-container .content").slideUp('slow');
-		$("#menu-container .blog-section").slideDown('slow');
+		$(this).addClass('active');
+		navigateToSection('blog-section');
 		return false;
 	});
 
 	$(".main-menu a.contactbutton").click(function(){
+		$(this).addClass('active');
 		$("#menu-container .content").fadeOut();
-		$("#menu-container .contact-section").slideDown('slow', function() {
-			// Start fractal animation when contact section is fully visible
-			if (typeof window.startFractalAnimation === 'function') {
-				window.startFractalAnimation();
-			}
-		});
+		navigateToSection('contact-section');
 		return false;
 	});
 
