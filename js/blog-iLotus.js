@@ -196,7 +196,7 @@ $(document).ready(function() {
     iLotus.init = {
         run: function() {
             iLotus.goTop.run();
-            // iLotus.changeTheme.init();
+            iLotus.changeTheme.init();
             iLotus.search.run();
         }
     };
