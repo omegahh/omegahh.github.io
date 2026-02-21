@@ -83,10 +83,10 @@ $(document).ready(function() {
         A: function() {
             if(this.check() == "A") {
                 $("#J-html").addClass("iLight");
-                jQuery.cookie('iTheme', 'B', { expires: 7, path: '/' });
+                Cookies.set('iTheme', 'B', { expires: 7, path: '/' });
             } else {
                 $("#J-html").removeClass("iLight");
-                jQuery.cookie('iTheme', 'A', { expires: 7, path: '/' });
+                Cookies.set('iTheme', 'A', { expires: 7, path: '/' });
             }
         },
         B: function() {
@@ -97,19 +97,18 @@ $(document).ready(function() {
             }
         },
         check: function() {
-            var iThemeCookie = jQuery.cookie("iTheme");
+            var iThemeCookie = Cookies.get("iTheme");
             if(iThemeCookie != null) {
                 return iThemeCookie;
             } else {
-                jQuery.cookie('iTheme', 'A', { expires: 7, path: '/' });
+                Cookies.set('iTheme', 'A', { expires: 7, path: '/' });
                 return "A";
             }
         },
         init: function() {
             var that = this;
-            $("#J-changeTheme").toggle(function(e) {
-                that.A();
-            }, function(e) {
+            $("#J-changeTheme").on("click", function(e) {
+                e.preventDefault();
                 that.A();
             });
             this.B();
