@@ -8,17 +8,6 @@ http://www.templatemo.com/preview/templatemo_421_raleway
 
 /* Fonts loaded via <link> tags in HTML for better performance */
 
-@keyframes fadeInDown {
-	from {
-		opacity: 0;
-		transform: translate3d(0, -20px, 0);
-	}
-	to {
-		opacity: 1;
-		transform: translate3d(0, 0, 0);
-	}
-}
-
 :root {
 	--animate-duration: 1s;
 }
