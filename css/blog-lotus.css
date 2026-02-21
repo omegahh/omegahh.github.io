@@ -11,18 +11,21 @@ Theme Name: iLotus
 	font-style: bold;
 	font-weight: 700;
 	src: local('PT Serif Bold'), local('PTSerif-Bold'), url(../fonts/PTSerifBold.woff) format('woff');
+	font-display: swap;
 }
 @font-face {
 	font-family: 'PT Serif';
 	font-style: italic;
 	font-weight: 400;
 	src: local('PT Serif Italic'), local('PTSerif-Italic'), url(../fonts/PTSerifItalic.woff) format('woff');
+	font-display: swap;
 }
 @font-face {
 	font-family: 'PT Serif';
 	font-style: normal;
 	font-weight: 400;
 	src: local('PT Serif'), local('PTSerif-Regular'), url(../fonts/PTSerif.woff) format('woff');
+	font-display: swap;
 }
 @font-face {
 	font-family: "FontAwesome";
@@ -30,6 +33,7 @@ Theme Name: iLotus
 	src: url('../fonts/fontawesome-webfont.eot?#iefix') format('eot'), url('../fonts/fontawesome-webfont.woff') format('woff'), url('../fonts/fontawesome-webfont.ttf') format('truetype'), url('../fonts/fontawesome-webfont.svg#FontAwesome') format('svg');
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 
 /*************************

@@ -5,6 +5,7 @@ authorial:    http://www.omegaxy.com
 categories:   ML
 tags:         ML Performance
 title:        ROC 分析简要
+math:         true
 ---
 
 在信息检索或者分类问题中，模型给出结果的好坏需要一个标准的评价度量。大约10年前，在 **Machine learning (ML)** 文献中一统天下的标准：**分类精度 (Accuracy)**；在**信息检索 (IR)** 领域中常用 **Recall** 和 **Precision** 等等。其实度量反应了人们对“好”的分类结果的追求，同一时期的不同的度量反映了人们对什么是“好”，这个最根本问题的不同认识，而不同时期流行的度量则反映了人们认识事物的深度的变化。近年来，随着 **ML** 的相关技术从实验室走向实际应用，一些实际的问题对度量标准提出了新的需求。特别的，现实中样本在不同类别上的**不均衡分布 (class distribution imbalance problem)**。使得 **Accuracy** 这样的传统的度量标准不能恰当的反应分类器的性能。

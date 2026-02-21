@@ -2,7 +2,6 @@
 // Only initialize if the canvas container exists
 let div = document.getElementById("fractal");
 if (!div) {
-	console.warn("Fractal container not found");
 }
 
 // Initialize canvas variables
@@ -79,7 +78,6 @@ function init(divid, elemid) {
 	let canvas = document.getElementById(elemid);
 
 	if (!div || !canvas) {
-		console.error("Fractal: Required elements not found");
 		return [null, null, null, 0, 0];
 	}
 
@@ -98,7 +96,6 @@ function init(divid, elemid) {
 	context.fillStyle = "rgba(30,30,30,1)";
 	context.fillRect(0, 0, width, height);
 
-	console.log("Fractal canvas initialized:", width, "x", height);
 	return [div, canvas, context, width, height];
 }
 
@@ -141,7 +138,6 @@ window.startFractalAnimation = function() {
 	if (animationRunning) return; // Already running
 
 	if (!div || window.innerWidth < 992) {
-		console.log("Fractal animation disabled on mobile");
 		return;
 	}
 
@@ -169,7 +165,6 @@ window.startFractalAnimation = function() {
 					// Recalculate dimensions accounting for padding
 					w = canvas.width = div.clientWidth - 40;
 					h = canvas.height = div.clientHeight - 40;
-					console.log("Canvas resized:", w, "x", h);
 				}
 			});
 		}
@@ -177,7 +172,6 @@ window.startFractalAnimation = function() {
 
 	if (canvas && c) {
 		animationRunning = true;
-		console.log("Fractal animation started");
 		loop();
 	}
 };
@@ -191,5 +185,4 @@ window.stopFractalAnimation = function() {
 		cancelAnimationFrame(animationFrameId);
 		animationFrameId = null;
 	}
-	console.log("Fractal animation stopped");
 };

@@ -2,8 +2,21 @@
 layout: default
 isPost: True
 ---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": {{ page.author | jsonify }}
+  },
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "url": "{{ site.url }}{{ page.url }}"
+}
+</script>
 <p class="lotus-breadcrub">
-    <a href="{{ site.url }}/blog/index.html" rel="nofollow" rel="nofollow" title="Home">Home</a>
+    <a href="{{ site.url }}/blog/index.html" rel="nofollow" title="Home">Home</a>
     <span> &gt; </span>
     <a href="{{ site.url }}/blog/archives.html" rel="nofollow" >Archives</a>
     <span> &gt; </span>
