@@ -59,7 +59,7 @@ a.toggle-nav {
     margin: 60px 0;
     width: 46px;
     height: 46px;
-    background: #4e91c9;
+    background: #00d4aa;
     text-align: center;
     line-height: 46px;
 }
@@ -100,10 +100,11 @@ ul.main-menu li a {
     text-transform: uppercase;
     font-size: 13px;
 	font-weight: 400;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
 ul.main-menu li a.active {
-    background: #4e91c9;
+    background: #00d4aa;
     color: #fff;
 }
 
@@ -128,7 +129,7 @@ ul.main-menu li a.active {
 
     ul.main-menu li a.active {
         background: inherit;
-        color: #4e91c9;
+        color: #00d4aa;
     }
 }
 
@@ -153,6 +154,12 @@ h2.welcome-title {
     color: #fff;
     font-size: 48px;
     margin-bottom: 30px;
+    background: linear-gradient(135deg, #00d4aa, #4e91c9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+    filter: drop-shadow(0 0 12px rgba(0, 212, 170, 0.3));
 
 	animation: fadeInLeft;
 	animation-duration: 2s;
@@ -177,6 +184,23 @@ h2.welcome-title {
     margin-bottom: 100px;
 }
 
+.home-contents > .row {
+    align-items: center;
+}
+
+.home-contents .project-item img {
+    height: 170px;
+    object-fit: cover;
+}
+
+.home-contents .project-item {
+    margin-bottom: 20px;
+}
+
+.home-contents .row .row > [class*="col-"]:nth-child(n+3) .project-item {
+    margin-bottom: 0;
+}
+
 .home-contents h2 {
     color: #fff;
     font-size: 36px;
@@ -192,7 +216,9 @@ h2.welcome-title {
 	opacity: 0;
     padding: 60px;
     background: #46494f;
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    border-radius: 8px;
+    border-left: 3px solid #00d4aa;
 	animation: fadeInUp;
 	animation-duration: 2s;
     animation-delay: 0.5s;
@@ -210,6 +236,12 @@ h2.welcome-title {
     overflow: hidden;
     border: 3px solid #1a1c1f;
     backface-visibility: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
 }
 
 .project-item img {
@@ -303,6 +335,7 @@ h2.welcome-title {
     background: #fff;
     padding: 40px;
     color: #32353a;
+    border-radius: 8px;
 	opacity: 0;
 	animation: fadeInRight;
 	animation-duration: 2.5s;
@@ -351,9 +384,10 @@ h2.welcome-title {
 }
 
 .offer-title {
-    color: #4e91c9;
+    color: #00d4aa;
     padding: 30px;
     background: #fff;
+    border-radius: 8px;
     margin-bottom: 40px;
 	opacity: 0;
 	animation: fadeInDown;
@@ -365,6 +399,7 @@ h2.welcome-title {
 .offer-item {
     margin-top: 40px;
     overflow: hidden;
+    border-radius: 8px;
 }
 
 .offer-item figure {
@@ -397,6 +432,7 @@ h2.welcome-title {
     background: #fff;
     color: #32353a;
     position: relative;
+    border-radius: 8px;
 }
 
 .offer-content h4 {
@@ -409,45 +445,19 @@ h2.welcome-title {
 }
 
 span.offer-left {
-    position: absolute;
-    bottom: -1px;
-    left: -1px;
-    width: 30px;
-    height: 30px;
+    display: none;
 }
 
 .offer-left>i {
-    position: absolute;
-    display: inline-block;
-    width: 0;
-    height: 0;
-    line-height: 0;
-    border: 15px solid transparent;
-    border-left: 15px solid #32353a;
-    border-bottom: 15px solid #32353a;
-    left: 0px;
-    top: 0px;
+    display: none;
 }
 
 span.offer-right {
-    position: absolute;
-    bottom: -1px;
-    right: -1px;
-    width: 30px;
-    height: 30px;
+    display: none;
 }
 
 .offer-right>i {
-    position: absolute;
-    display: inline-block;
-    width: 0;
-    height: 0;
-    line-height: 0;
-    border: 15px solid transparent;
-    border-right: 15px solid #32353a;
-    border-bottom: 15px solid #32353a;
-    left: 0px;
-    top: 0px;
+    display: none;
 }
 
 .projects-header {
@@ -483,13 +493,13 @@ span.offer-right {
 	animation-fill-mode: forwards;
 }
 
-.project-item.proj1 { animation-delay: 0.5s; }
-.project-item.proj2 { animation-delay: 0.9s; }
-.project-item.proj3 { animation-delay: 1.3s; }
-.project-item.proj4 { animation-delay: 1.7s; }
-.project-item.proj5 { animation-delay: 2.1s; }
-.project-item.proj6 { animation-delay: 2.5s; }
-.project-item.proj7 { animation-delay: 2.9s; }
+.project-item.proj1 { animation-delay: 0.1s; }
+.project-item.proj2 { animation-delay: 0.25s; }
+.project-item.proj3 { animation-delay: 0.4s; }
+.project-item.proj4 { animation-delay: 0.55s; }
+.project-item.proj5 { animation-delay: 0.7s; }
+.project-item.proj6 { animation-delay: 0.85s; }
+.project-item.proj7 { animation-delay: 1.0s; }
 
 span.solid-line {
     width: 60px;
@@ -631,7 +641,8 @@ span.solid-line {
 
 .contact-form input,.contact-form textarea {
     background: #32353a;
-    border: 0;
+    border: 1px solid #46494f;
+    border-radius: 6px;
     outline: 0;
     color: #fff;
     font-size: 13px;
@@ -640,6 +651,11 @@ span.solid-line {
     width: 100%;
     margin-bottom: 30px;
     padding: 10px;
+    transition: border-color 0.2s;
+}
+
+.contact-form input:focus,.contact-form textarea:focus {
+    border-color: #00d4aa;
 }
 
 .contact-form textarea {
@@ -650,18 +666,19 @@ span.solid-line {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 12px;
-    background: #4e91c9;
+    background: #00d4aa;
     color: #fff !important;
     padding: 12px 20px;
     display: inline-block;
     margin-bottom: 30px;
     border: none;
+    border-radius: 6px;
     cursor: pointer;
     transition: background 0.3s ease;
 }
 
 .message-button:hover {
-    background: #3a7aa9;
+    background: #00b892;
 }
 
 .message-button:disabled {
@@ -685,8 +702,8 @@ span.solid-line {
 }
 
 .enterblog li a:hover, .main-footer .social li a:hover {
-    background: #4e91c9;
-    border-color: #4e91c9;
+    background: #00d4aa;
+    border-color: #00d4aa;
 }
 
 .enterblog li {
@@ -717,8 +734,8 @@ html {
 
 body {
     background: #32353a;
-    font-size: 15px;
-    font-weight: 300;
+    font-size: 16px;
+    font-weight: 400;
     color: #b7bcbe;
     padding: 20px;
     font-family: "Roboto",sans-serif;

@@ -27,27 +27,27 @@ jQuery(document).ready(function($) {
 
 	// Navigation button handlers
 	$(".main-menu a.homebutton").click(function(){
-		$(this).addClass('active');
 		navigateToSection(null); // Show homepage
+		$(this).addClass('active');
 		$("#menu-container .homepage").slideDown('slow');
 		return false;
 	});
 
 	$(".main-menu a.aboutbutton").click(function(){
-		$(this).addClass('active');
 		navigateToSection('about-section');
+		$(this).addClass('active');
 		return false;
 	});
 
 	$(".main-menu a.projectbutton").click(function(){
-		$(this).addClass('active');
 		navigateToSection('project-section');
+		$(this).addClass('active');
 		return false;
 	});
 
 	$(".main-menu a.blogbutton").click(function(){
-		$(this).addClass('active');
 		navigateToSection('blog-section');
+		$(this).addClass('active');
 		return false;
 	});
 
@@ -55,6 +55,7 @@ jQuery(document).ready(function($) {
 		$(this).addClass('active');
 		$("#menu-container .content").fadeOut();
 		navigateToSection('contact-section');
+		$(this).addClass('active');
 		return false;
 	});
 
@@ -87,7 +88,7 @@ jQuery(document).ready(function($) {
 			success: function(response) {
 				statusDiv.css({
 					'display': 'block',
-					'background-color': '#4e91c9',
+					'background-color': '#00d4aa',
 					'color': '#fff'
 				}).text('Thank you! Your message has been sent successfully.');
 				form[0].reset();
